@@ -35,7 +35,7 @@ plot2 <- function() {
   dataSet <- dataSet[complete.cases(dataSet),]
 
   ##create our plot using png as our device
-  png(file = "./plot2.png")
+  png(file = "./plot2.png", width = 480, height = 480)
   par(cex=.9)  ##make our font smaller globally
   plot(dataSet$dateTime,dataSet$Global_active_power, xaxt = "n", type = "n", ylab = "Global Active Power (kilowatts)")
   lines(dataSet$dateTime,dataSet$Global_active_power)

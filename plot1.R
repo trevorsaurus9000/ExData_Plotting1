@@ -35,7 +35,7 @@ plot1 <- function() {
   dataSet <- dataSet[complete.cases(dataSet),]
 
   ##create our plot using png as our device
-  png(file = "./plot1.png")
+  png(file = "./plot1.png", width = 480, height = 480)
   hist(dataSet$Global_active_power, col = "red", main = "Global Active Power", xlab = "Global Active Power (kilowatts)")
   dev.off()
 }

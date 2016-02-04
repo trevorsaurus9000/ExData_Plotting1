@@ -35,7 +35,7 @@ plot3 <- function() {
   dataSet <- dataSet[complete.cases(dataSet),]
   
   ##create our plot using png as our device
-  png(file = "./plot3.png")
+  png(file = "./plot3.png", width = 480, height = 480)
   par(cex=.9)  ##make our font smaller globally
   
   with(dataSet, plot(dateTime,Sub_metering_1, xaxt = "n", type = "n", ylab = "Energy sub metering"))
